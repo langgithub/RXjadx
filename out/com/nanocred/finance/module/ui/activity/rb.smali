@@ -1,0 +1,123 @@
+.class public final Lcom/nanocred/finance/module/ui/activity/rb;
+.super Lcom/nanocred/finance/c/h/P$a;
+.source "Paramount"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/nanocred/finance/module/ui/activity/UpdateEmailActivity;->onCreate(Landroid/os/Bundle;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lcom/nanocred/finance/module/ui/activity/UpdateEmailActivity;
+
+
+# direct methods
+.method constructor <init>(Lcom/nanocred/finance/module/ui/activity/UpdateEmailActivity;)V
+    .registers 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
+
+    .line 1
+    iput-object p1, p0, Lcom/nanocred/finance/module/ui/activity/rb;->a:Lcom/nanocred/finance/module/ui/activity/UpdateEmailActivity;
+
+    invoke-direct {p0}, Lcom/nanocred/finance/c/h/P$a;-><init>()V
+
+    invoke-static {}, Lcom/SEC/SEC/Helper;->stub()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public afterTextChanged(Landroid/text/Editable;)V
+    .registers 4
+
+    .line 1
+#    :catch_0
+    iget-object v0, p0, Lcom/nanocred/finance/module/ui/activity/rb;->a:Lcom/nanocred/finance/module/ui/activity/UpdateEmailActivity;
+
+    sget v1, Lcom/nanocred/finance/c;->tv_submit:I
+
+    invoke-virtual {v0, v1}, Lcom/nanocred/finance/module/ui/activity/UpdateEmailActivity;->a(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    const-string v1, "tv_submit"
+
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/h;->a(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_17
+
+    invoke-interface {p1}, Landroid/text/Editable;->length()I
+
+    move-result p1
+
+    goto :goto_18
+
+    :cond_17
+    const/4 p1, 0x0
+
+    :goto_18
+    if-lez p1, :cond_1b
+
+    const/4 v1, 0x1
+
+    :cond_1b
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setEnabled(Z)V
+
+    :try_start_1e
+    return-void
+#    :try_end_1f
+#    .catch Ljava/lang/Exception; {:try_start_1e .. :try_end_1f} :catch_0
+.end method
+
+.method public onTextChanged(Ljava/lang/CharSequence;III)V
+    .registers 5
+
+    .line 1
+    iget-object p1, p0, Lcom/nanocred/finance/module/ui/activity/rb;->a:Lcom/nanocred/finance/module/ui/activity/UpdateEmailActivity;
+
+    sget p2, Lcom/nanocred/finance/c;->ed_new_email:I
+
+    invoke-virtual {p1, p2}, Lcom/nanocred/finance/module/ui/activity/UpdateEmailActivity;->a(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/nanocred/finance/module/customview/EmailInfoView;
+
+    invoke-virtual {p1}, Lcom/nanocred/finance/module/customview/BaseTextInputLayout;->b()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1d
+
+    .line 2
+    iget-object p1, p0, Lcom/nanocred/finance/module/ui/activity/rb;->a:Lcom/nanocred/finance/module/ui/activity/UpdateEmailActivity;
+
+    sget p2, Lcom/nanocred/finance/c;->ed_new_email:I
+
+    invoke-virtual {p1, p2}, Lcom/nanocred/finance/module/ui/activity/UpdateEmailActivity;->a(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/nanocred/finance/module/customview/EmailInfoView;
+
+    invoke-virtual {p1}, Lcom/nanocred/finance/module/customview/BaseTextInputLayout;->a()V
+
+    :cond_1d
+    return-void
+.end method

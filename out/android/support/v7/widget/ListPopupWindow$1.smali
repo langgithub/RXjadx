@@ -1,0 +1,55 @@
+.class Landroid/support/v7/widget/ListPopupWindow$1;
+.super Landroid/support/v7/widget/ForwardingListener;
+.source "Paramount"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Landroid/support/v7/widget/ListPopupWindow;->createDragToOpenListener(Landroid/view/View;)Landroid/view/View$OnTouchListener;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic this$0:Landroid/support/v7/widget/ListPopupWindow;
+
+
+# direct methods
+.method constructor <init>(Landroid/support/v7/widget/ListPopupWindow;Landroid/view/View;)V
+    .registers 3
+
+    .line 1
+    iput-object p1, p0, Landroid/support/v7/widget/ListPopupWindow$1;->this$0:Landroid/support/v7/widget/ListPopupWindow;
+
+    invoke-direct {p0, p2}, Landroid/support/v7/widget/ForwardingListener;-><init>(Landroid/view/View;)V
+
+    invoke-static {}, Lcom/SEC/SEC/Helper;->stub()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public bridge synthetic getPopup()Landroid/support/v7/view/menu/ShowableListMenu;
+    .registers 2
+
+    .line 1
+    invoke-virtual {p0}, Landroid/support/v7/widget/ListPopupWindow$1;->getPopup()Landroid/support/v7/widget/ListPopupWindow;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getPopup()Landroid/support/v7/widget/ListPopupWindow;
+    .registers 2
+
+    .line 2
+    iget-object v0, p0, Landroid/support/v7/widget/ListPopupWindow$1;->this$0:Landroid/support/v7/widget/ListPopupWindow;
+
+    return-object v0
+.end method
