@@ -7,7 +7,7 @@
 1. 将包名写入到 /data/fart 文件里。不要出现空格和换行
 2. 安装apk,一定要打开apk里的文件读写权限
 3. 点击apk,开始脱壳，等待脱壳完成。 adb logcat -s ActivityThread
-4. 将 /sdcard/fart/包名 脱壳后的文件拷贝出来 进行指令修复
+4. 将 /sdcard/fart/包名 脱壳后的文件拷贝出来 进行指令修复(一般拷贝最大的dex)
 
 #### 指令抽取修复
 python2.7 fartpatch.py -d 10104344_dexfile.dex -i 10104344_ins_3180.bin >> repire.txt
